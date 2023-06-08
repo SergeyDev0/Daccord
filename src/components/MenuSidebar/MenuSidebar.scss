@@ -1,0 +1,146 @@
+.menu-sidebar {
+  display: flex;
+  width: 320px;
+  height: 100vh;
+
+  .wrapper__channels {
+    background-color: rgba(29, 32, 62, 0.3);
+    height: 100%;
+    padding-left: 8px;
+
+    .wrapper__logo {
+      width: 40px;
+      display: flex;
+      justify-content: center;
+      margin: 1rem 10px;
+      cursor: pointer;
+    }
+
+    .channel-list {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      background-color: rgba(56, 58, 87, 0.5);
+      width: fit-content;
+      border-left: 1px solid #9B85C5;
+      margin: 58px 0;
+      padding: 0 10px;
+      gap: 1rem;
+
+      &::before {
+        box-sizing: content-box;
+        position: absolute;
+        content: '';
+        bottom: 100%;
+        right: 50%;
+        transform: translateX(calc(50% - 0.5px));
+        width: 60px;
+        height: 40px;
+        background-color: rgba(56, 58, 87, 0.5);
+        border-radius: 50px 0 0 0;
+        border: 1px solid #9B85C5;
+        border-right: none;
+        border-bottom: none;
+      }
+
+      &::after {
+        box-sizing: content-box;
+        position: absolute;
+        content: '';
+        top: 100%;
+        right: 50%;
+        transform: translateX(calc(50% - 0.5px));
+        width: 60px;
+        height: 40px;
+        background-color: rgba(56, 58, 87, 0.5);
+        border-radius: 0 0 0 50px;
+        border: 1px solid #9B85C5;
+        border-right: none;
+        border-top: none;
+      }
+
+      .channel-list__item {
+        position: relative;
+        cursor: pointer;
+        border-radius: 50%;
+
+        &.active::before {
+          z-index: -1;
+          position: absolute;
+          content: '';
+          width: 46px;
+          height: 46px;
+          top: -3px;
+          right: -3px;
+          background: linear-gradient(127.64deg, #C322FF 6.31%, #00BAE1 99.72%);
+          margin: auto;
+          border-radius: 50%;
+          filter: blur(7px);
+
+        }
+
+        &.active::after {
+          position: absolute;
+          content: '';
+          background: url('/img/active-channel.png') no-repeat 0 0;
+          background-size: 100%;
+          right: calc(100% + 5.75px);
+          top: 50%;
+          transform: translateY(-50%);
+          width: 7.5px;
+          height: 37px;
+        }
+
+        &-img {
+          display: block;
+          border-radius: 50%;
+          height: 40px;
+          width: 40px;
+        }
+      }
+    }
+  }
+
+  .wrapper__menu {
+    height: 100%;
+    width: 100%;
+    border-left: 1px solid #9B85C5; 
+    background-color: rgba(44, 47, 72, 0.5);
+    z-index: 2;
+
+    .menu-sidebar__title {
+      padding: 12px 16px;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      font-weight: bold;
+    }
+
+    .menu-list {
+      padding: 0 16px;
+      display: flex;
+      flex-direction: column;
+      gap: .5rem;
+      margin-top: 12px;
+      
+
+      &__item {
+        font-size: 15px;
+        cursor: pointer;
+        display: flex;
+        gap: .5rem;
+        padding: .5rem;
+        border-radius: 5px;
+        transition: .2s ease;
+
+        &.active {
+          background: rgba(0, 0, 0, 0.5);
+
+        }
+
+        &:hover:not(.active) {
+          background: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}
