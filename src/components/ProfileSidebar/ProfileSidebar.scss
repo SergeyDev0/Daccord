@@ -1,0 +1,160 @@
+.profile-sidebar {
+  width: 240px;
+  height: 100vh;
+  background-color: #2c2f48;
+  border-left: 1px solid rgba(255, 255, 255, 0.1);
+
+  &__header {
+    box-sizing: border-box;
+    display: flex;
+    height: 54px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+    &-nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 1rem;
+      width: 100%;
+
+      &__item {
+        position: relative;
+        width: 27px;
+        height: 27px;
+        cursor: pointer;
+
+        &:hover::before {
+          content: "";
+          position: absolute;
+          background-color: rgba(255, 255, 255, 0.1);
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          left: -3px;
+          top: -3px;
+        }
+
+        &:active::before {
+          content: "";
+          position: absolute;
+          background-color: rgba(255, 255, 255, 0.2);
+          border-radius: 50%;
+          width: 32px;
+          height: 32px;
+          left: -3px;
+          top: -3px;
+        }
+
+        &--icon {
+          width: 100%;
+          height: 100%;
+        }
+      }
+    }
+  }
+
+  &__profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .profile-sidebar__wrapper-img {
+      position: relative;
+      margin: 40px 0 30px 0;
+
+      &::after {
+        content: url("../../icons/border-avatar-profile.svg");
+        position: absolute;
+        width: 220px;
+        height: 242px;
+        top: -42px;
+        left: -46px;
+      }
+    }
+
+    &-name {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 4px;
+    }
+
+    &-id {
+      font-size: 15px;
+      color: rgba(255, 255, 255, 0.25);
+    }
+  }
+
+  &__content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 1rem;
+    height: 100%;
+
+    .profile-sidebar__section {
+
+      &.members .section__empty {
+        height: 265px;
+      }
+
+      .section__header {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin: 28px 0 16px 0;
+      }
+
+      .section__title {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.55);
+      }
+
+      .section__link {
+        font-size: 15px;
+        color: rgba(255, 255, 255, 0.25);
+      }
+
+      .section__empty {
+        width: 100%;
+        height: 100%;
+        border-radius: 5px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #393d5e;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+
+        &-text {
+          color: rgba(255, 255, 255, 0.75);
+          font-size: 15px;
+        }
+      }
+
+      .section__list {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+
+        &-item {
+          border-radius: 5px;
+          background-color: #393D5E;
+          box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+        }
+
+        .section__item-link {
+          box-sizing: border-box;
+          width: 100%;
+          gap: 8px;
+          display: flex;
+          align-items: center;
+          padding: 8px;
+        }
+
+        .section__item-title {
+          font-size: 15px;
+          color: rgba(255, 255, 255, 0.75);
+        }
+      }
+    }
+  }
+}

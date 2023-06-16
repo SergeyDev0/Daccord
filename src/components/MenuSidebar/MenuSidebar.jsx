@@ -1,64 +1,142 @@
-import React from "react"
-import "./MenuSidebar.scss"
-import Explore from '../../icons/Explore.svg'
-import Music from '../../icons/Music.svg'
-import Gaming from '../../icons/Game.svg'
-import Tech from '../../icons/Tech.svg'
-import Education from '../../icons/Education.svg'
-import Student from '../../icons/Student.svg'
-import Entertainment from '../../icons/Entertainment.svg'
+import React from "react";
+import "./MenuSidebar.scss";
+import LogoProfile from "../../icons/Logo.svg";
+import ExploreGroup from "../../icons/Explore-group.svg";
+import AddIconGroup from "../../icons/IconAddChannel-group.svg";
+import Explore from "../../icons/Explore.svg";
+import Music from "../../icons/Music.svg";
+import Gaming from "../../icons/Game.svg";
+import Tech from "../../icons/Tech.svg";
+import Education from "../../icons/Education.svg";
+import Student from "../../icons/Student.svg";
+import Entertainment from "../../icons/Entertainment.svg";
+import AddFriend from "../../icons/AddFriend.svg";
+import Mic from "../../icons/Mic.svg";
+import Headphones from "../../icons/Headphones.svg";
 
 const MenuSidebar = () => {
   return (
     <div className="menu-sidebar">
-      <div className="wrapper__channels">
-        <div className="wrapper__logo">
-          <img src="/img/Logo.png" alt="profile image" className="logo-img" />
+      <div className="menu-sidebar__top">
+        <div className="wrapper__channels">
+          <div className="wrapper__logo">
+            <img src={LogoProfile} alt="profile image" className="logo-img" />
+          </div>
+          <ul className="channel-list">
+            <li className="channel-list__item active">
+              <img
+                src={ExploreGroup}
+                alt="explore"
+                className="channel-list__item-img"
+              />
+            </li>
+            <li className="channel-list__item">
+              <img
+                src={AddIconGroup}
+                alt="add channel"
+                className="channel-list__item-img"
+              />
+            </li>
+          </ul>
         </div>
-        <ul className="channel-list">
-          <li className="channel-list__item active">
-            <img src="/img/Explore.png" alt="explore" className="channel-list__item-img" />
-          </li>
-          <li className="channel-list__item">
-            <img src="/img/IconAddChannel.png" alt="add channel" className="channel-list__item-img" />
-          </li>
-        </ul>
+        <div className="wrapper__menu">
+          <h2 className="menu-sidebar__title">Explore</h2>
+          <ul className="menu-list">
+            <li className="menu-list__item active">
+              <img
+                className="menu-sidebar__item-icon"
+                src={Explore}
+                alt="Home"
+              />
+              Home
+            </li>
+            <li className="menu-list__item">
+              <img
+                className="menu-sidebar__item-icon"
+                src={Music}
+                alt="Music"
+              />
+              Music
+            </li>
+            <li className="menu-list__item">
+              <img
+                className="menu-sidebar__item-icon"
+                src={Gaming}
+                alt="Gaming"
+              />
+              Gaming
+            </li>
+            <li className="menu-list__item">
+              <img
+                className="menu-sidebar__item-icon"
+                src={Education}
+                alt="Education"
+              />
+              Education
+            </li>
+            <li className="menu-list__item">
+              <img
+                className="menu-sidebar__item-icon"
+                src={Tech}
+                alt="Science & Tech"
+              />
+              Science & Tech
+            </li>
+            <li className="menu-list__item">
+              <img
+                className="menu-sidebar__item-icon"
+                src={Entertainment}
+                alt="Entertainment"
+              />
+              Entertainment
+            </li>
+            <li className="menu-list__item">
+              <img
+                className="menu-sidebar__item-icon"
+                src={Student}
+                alt="Student Hubs"
+              />
+              Student Hubs
+            </li>
+          </ul>
+        </div>
       </div>
-      <div className="wrapper__menu">
-        <h2 className="menu-sidebar__title">Explore</h2>
-        <ul className="menu-list">
-          <li className="menu-list__item active">
-            <img className="menu-sidebar__item-icon" src={Explore} alt="Home" />
-            Home
-          </li>
-          <li className="menu-list__item">
-            <img className="menu-sidebar__item-icon" src={Music} alt="Music" />
-            Music
-          </li>
-          <li className="menu-list__item">
-            <img className="menu-sidebar__item-icon" src={Gaming} alt="Gaming" />
-            Gaming
-          </li>
-          <li className="menu-list__item">
-            <img className="menu-sidebar__item-icon" src={Education} alt="Education" />
-            Education
-          </li>
-          <li className="menu-list__item">
-            <img className="menu-sidebar__item-icon" src={Tech} alt="Science & Tech" />
-            Science & Tech
-          </li>
-          <li className="menu-list__item">
-            <img className="menu-sidebar__item-icon" src={Entertainment} alt="Entertainment" />
-            Entertainment
-          </li>
-          <li className="menu-list__item">
-            <img className="menu-sidebar__item-icon" src={Student} alt="Student Hubs" />
-            Student Hubs
-          </li>
-        </ul>
+      <div className="menu-sidebar__bottom">
+        <div className="waveform"></div>
+        <div className="setting-conference">
+          <button className="setting-conference__profile">
+            <img
+              src="/img/AvatarProfile.png"
+              alt="Ваш аватар"
+              className="setting-conference__profile-img"
+            />
+            <h4 className="setting-conference__profile-name">sophiefortune</h4>
+          </button>
+          <button className="setting-conference--button mic active">
+            <img
+              src={Mic}
+              alt="Microphone"
+              className="setting-conference__button-icon"
+            />
+          </button>
+          <button className="setting-conference--button">
+            <img
+              src={Headphones}
+              alt="Headphones"
+              className="setting-conference__button-icon"
+            />
+          </button>
+          <button className="setting-conference--button">
+            <img
+              src={AddFriend}
+              alt="Add friend"
+              className="setting-conference__button-icon"
+            />
+          </button>
+        </div>
       </div>
     </div>
-  )
+  );
 };
 
 export default MenuSidebar;
