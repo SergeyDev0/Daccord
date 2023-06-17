@@ -1,9 +1,23 @@
+.main::-webkit-scrollbar {
+  width: 5px;
+}
+
+.main::-webkit-scrollbar-track {
+  background: none;
+}
+
+.main::-webkit-scrollbar-thumb {
+  background-color: rgba(255, 255, 255, 0.15);
+  border-radius: 20px;
+}
+
 .main {
   box-sizing: border-box;
   flex-grow: 1;
   background-color: #1D203E;
   z-index: 0;
   height: 100%;
+  overflow-y: auto;
 
   &__header {
     display: flex;
@@ -55,6 +69,7 @@
   &__content {
     padding: 24px;
     box-sizing: border-box;
+    overflow-y: auto;
   }
 
   &__banner {
@@ -121,22 +136,16 @@
       &::before {
         content: '';
         position: absolute;
-        background: linear-gradient(0deg, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)),
-        radial-gradient(22.52% 54.93% at 49.06% 30.28%, #31376F 0%, rgba(137, 75, 162, 0) 100%),
-        conic-gradient(from 180deg at 50% 36.97%, #7976E8 -110.28deg, #F449F4 6.37deg, #0019C0 153.67deg, #7976E8 249.72deg, #F449F4 366.37deg);
+        background: url('/img/background-card-blur.png');
         background-size: 100% 100%;
         background-repeat: no-repeat;
-        bottom: 0;
+        bottom: -1px;
         left: 0;
         right: 0;
         width: 100%;
-        aspect-ratio: 320/180;
-        -webkit-clip-path: polygon(0 29%, 49% 39%, 100% 29%, 100% 100%, 0 100%);
-        clip-path: polygon(0 29%, 49% 39%, 100% 29%, 100% 100%, 0 100%);
+        height: 60%;
         border-radius: 20px;
         z-index: -1;
-        opacity: .95;
-        backdrop-filter: blur(25px);
       }
 
       &-img {
