@@ -1,5 +1,5 @@
-import React from "react"
-import '../scss/Auth.scss'
+import React from "react";
+import '../scss/Auth.scss';
 
 const Auth = () => {
   return (

@@ -44,10 +44,12 @@ const Main = () => {
             <Link to="/" className="main__section-link">See all</Link>
           </div>
           <div className="main__wrapper-cards">
-            <div className="main__card">
+            <Link to="/" className="main__card">
               <img src="/img/Avatar-channel.png" className="main__card-img" />
-              <h4 className="main__card-title">Virtual Reality</h4>
-              <p className="main__card-description">A community for VR and novices alike, regular and friendly chat.</p>
+              <div className="main__card-content">
+                <h4 className="main__card-title">Virtual Reality</h4>
+                <p className="main__card-description">A community for VR and novices alike, regular and friendly chat.</p>
+              </div>
               <div className="row">
                 <div className="col">
                   <img src={OnlineIcon} className="main__card-icon" />
@@ -58,7 +60,100 @@ const Main = () => {
                   <p className="main__card-online">0 Members</p>
                 </div>
               </div>
-            </div>
+            </Link>
+            <Link to="/" className="main__card">
+              <img src="/img/Avatar-channel.png" className="main__card-img" />
+              <div className="main__card-content">
+                <h4 className="main__card-title">Virtual Reality</h4>
+                <p className="main__card-description">A community for VR and novices alike, regular and friendly chat.</p>
+              </div>
+              <div className="row">
+                <div className="col">
+                  <img src={OnlineIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Online</p>
+                </div>
+                <div className="col">
+                  <img src={MembersIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Members</p>
+                </div>
+              </div>
+            </Link>
+            <Link to="/" className="main__card">
+              <img src="/img/Avatar-channel.png" className="main__card-img" />
+              <div className="main__card-content">
+                <h4 className="main__card-title">Virtual Reality</h4>
+                <p className="main__card-description">A community for VR and novices alike, regular and friendly chat.</p>
+              </div>
+              <div className="row">
+                <div className="col">
+                  <img src={OnlineIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Online</p>
+                </div>
+                <div className="col">
+                  <img src={MembersIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Members</p>
+                </div>
+              </div>
+            </Link>
+          </div>
+        </section>
+        <section className="main__section">
+          <div className="main__section__header">
+            <h3 className="main__section-title">Featured Community</h3>
+            <Link to="/" className="main__section-link">See all</Link>
+          </div>
+          <div className="main__wrapper-cards">
+            <Link to="/" className="main__card">
+              <img src="/img/Avatar-channel.png" className="main__card-img" />
+              <div className="main__card-content">
+                <h4 className="main__card-title">Virtual Reality</h4>
+                <p className="main__card-description">A community for VR and novices alike, regular and friendly chat.</p>
+              </div>
+              <div className="row">
+                <div className="col">
+                  <img src={OnlineIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Online</p>
+                </div>
+                <div className="col">
+                  <img src={MembersIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Members</p>
+                </div>
+              </div>
+            </Link>
+            <Link to="/" className="main__card">
+              <img src="/img/Avatar-channel.png" className="main__card-img" />
+              <div className="main__card-content">
+                <h4 className="main__card-title">Virtual Reality</h4>
+                <p className="main__card-description">A community for VR and novices alike, regular and friendly chat.</p>
+              </div>
+              <div className="row">
+                <div className="col">
+                  <img src={OnlineIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Online</p>
+                </div>
+                <div className="col">
+                  <img src={MembersIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Members</p>
+                </div>
+              </div>
+            </Link>
+            <Link to="/" className="main__card">
+              <img src="/img/Avatar-channel.png" className="main__card-img" />
+              <div className="main__card-content">
+                <h4 className="main__card-title">Virtual Reality</h4>
+                <p className="main__card-description">A community for VR and novices alike, regular and friendly chat.</p>
+              </div>
+              <div className="row">
+                <div className="col">
+                  <img src={OnlineIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Online</p>
+                </div>
+                <div className="col">
+                  <img src={MembersIcon} className="main__card-icon" />
+                  <p className="main__card-online">0 Members</p>
+                </div>
+              </div>
+            </Link>
           </div>
         </section>
       </div>
