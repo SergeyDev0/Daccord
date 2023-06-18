@@ -13,24 +13,42 @@ import Entertainment from "../../icons/Entertainment.svg";
 import AddFriend from "../../icons/AddFriend.svg";
 import Mic from "../../icons/Mic.svg";
 import Headphones from "../../icons/Headphones.svg";
+import { Tooltip } from "react-tooltip";
 
 const MenuSidebar = () => {
+  const [toggleMic, setToggleMic] = React.useState(false);
+  const [toggleHeadphones, setToggleHeadphones] = React.useState(true);
   return (
     <div className="menu-sidebar">
       <div className="menu-sidebar__top">
         <div className="wrapper__channels">
-          <div className="wrapper__logo">
+          <div
+            className="wrapper__logo"
+            data-tooltip-id="personalChats"
+            data-tooltip-content="Personal chats"
+          >
+            <Tooltip id="personalChats" />
             <img src={LogoProfile} alt="profile image" className="logo-img" />
           </div>
           <ul className="channel-list">
-            <li className="channel-list__item active">
+            <li
+              className="channel-list__item active"
+              data-tooltip-id="explore"
+              data-tooltip-content="Explore"
+            >
+              <Tooltip id="explore" />
               <img
                 src={ExploreGroup}
                 alt="explore"
                 className="channel-list__item-img"
               />
             </li>
-            <li className="channel-list__item">
+            <li
+              className="channel-list__item"
+              data-tooltip-id="addChanel"
+              data-tooltip-content="Add channel"
+            >
+              <Tooltip id="addChanel" />
               <img
                 src={AddIconGroup}
                 alt="add channel"
@@ -112,21 +130,42 @@ const MenuSidebar = () => {
             />
             <h4 className="setting-conference__profile-name">sophiefortune</h4>
           </button>
-          <button className="setting-conference--button mic active">
+          <button
+            className="setting-conference--button mic active"
+            data-tooltip-id="mic"
+            data-tooltip-content={
+              toggleMic ? "On mic" : "Off mic"
+            }
+            onClick={() => setToggleMic(!toggleMic)}
+          >
+            <Tooltip id="mic" />
             <img
               src={Mic}
               alt="Microphone"
               className="setting-conference__button-icon"
             />
           </button>
-          <button className="setting-conference--button">
+          <button
+            className="setting-conference--button"
+            data-tooltip-id="headphones"
+            data-tooltip-content={
+              toggleHeadphones ? "On headphones" : "Off headphones"
+            }
+            onClick={() => setToggleHeadphones(!toggleHeadphones)}
+          >
+            <Tooltip id="headphones" />
             <img
               src={Headphones}
               alt="Headphones"
               className="setting-conference__button-icon"
             />
           </button>
-          <button className="setting-conference--button">
+          <button
+            className="setting-conference--button"
+            data-tooltip-id="addFriend"
+            data-tooltip-content="Add friend"
+          >
+            <Tooltip id="addFriend" />
             <img
               src={AddFriend}
               alt="Add friend"

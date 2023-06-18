@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { Tooltip } from "react-tooltip";
 import Mail from "../../icons/Mail.svg";
 import Chat from "../../icons/Chat.svg";
 import Bell from "../../icons/Bell.svg";
@@ -13,28 +14,48 @@ const ProfileSidebar = () => {
     <div className="profile-sidebar">
       <div className="profile-sidebar__header">
         <ul className="profile-sidebar__header-nav">
-          <li className="profile-sidebar__header-nav__item">
+          <li
+            className="profile-sidebar__header-nav__item"
+            data-tooltip-id="mail"
+            data-tooltip-content="News"
+          >
+            <Tooltip id="mail" />
             <img
               src={Mail}
               alt="Mail"
               className="profile-sidebar__header-nav__item--icon"
             />
           </li>
-          <li className="profile-sidebar__header-nav__item">
+          <li
+            className="profile-sidebar__header-nav__item"
+            data-tooltip-id="chat"
+            data-tooltip-content="Messages"
+          >
+            <Tooltip id="chat" />
             <img
               src={Chat}
               alt="Chat"
               className="profile-sidebar__header-nav__item--icon"
             />
           </li>
-          <li className="profile-sidebar__header-nav__item">
+          <li
+            className="profile-sidebar__header-nav__item"
+            data-tooltip-id="bell"
+            data-tooltip-content="Notifications"
+          >
+            <Tooltip id="bell" />
             <img
               src={Bell}
               alt="Bell"
               className="profile-sidebar__header-nav__item--icon"
             />
           </li>
-          <li className="profile-sidebar__header-nav__item">
+          <li
+            className="profile-sidebar__header-nav__item"
+            data-tooltip-id="settings"
+            data-tooltip-content="Settings"
+          >
+            <Tooltip id="settings" />
             <img
               src={Setting}
               alt="Setting"
@@ -54,12 +75,21 @@ const ProfileSidebar = () => {
             />
           </div>
           <h3 className="profile-sidebar__profile-name">Sophie Fortune</h3>
-          <h4 className="profile-sidebar__profile-id">@sophiefortune</h4>
+          <h4
+            className="profile-sidebar__profile-id"
+            onClick={(e) =>
+              navigator.clipboard.writeText(e.currentTarget.innerText)
+            }
+          >
+            @sophiefortune
+          </h4>
         </div>
         <div className="profile-sidebar__section members">
           <div className="section__header">
             <h3 className="section__title">New Members</h3>
-            <Link to="/" className="section__link">See all</Link>
+            <Link to="/" className="section__link">
+              See all
+            </Link>
           </div>
           <div className="section__empty">
             <h3 className="section__empty-text">No members</h3>

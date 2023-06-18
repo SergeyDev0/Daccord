@@ -30,6 +30,10 @@ img {
   pointer-events: none;
 }
 
+.react-tooltip {
+  z-index: 9999;
+}
+
 .loader {
   position: absolute;
   width: 100vw;

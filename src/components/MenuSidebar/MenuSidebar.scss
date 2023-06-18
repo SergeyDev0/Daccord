@@ -38,8 +38,7 @@
           position: absolute;
           content: '';
           bottom: 100%;
-          right: 50%;
-          transform: translateX(calc(50% - 0.6px));
+          right: 0;
           width: 60px;
           height: 40px;
           background-color: rgba(56, 58, 87, 0.5);
@@ -54,8 +53,7 @@
           position: absolute;
           content: '';
           top: 100%;
-          right: 50%;
-          transform: translateX(calc(50% - 0.6px));
+          right: 0;
           width: 60px;
           height: 40px;
           background-color: rgba(56, 58, 87, 0.5);
@@ -209,6 +207,7 @@
           border-left: 12px solid transparent;
           border-right: 12px solid transparent;
           border-top: 8px solid rgb(105, 94, 148);
+          pointer-events: none;
         }
       }
 
