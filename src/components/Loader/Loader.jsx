@@ -7,7 +7,7 @@ const Loader = () => {
     loaderRef.current.querySelector('.loader__progress-bar').classList.add('active');
     setTimeout(() => {
       loaderRef.current.classList.add('hide');
-    }, 1700)
+    }, 1500)
   };
 
   return (
