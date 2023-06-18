@@ -35,9 +35,9 @@ const Main = () => {
         </div>
       </div>
       <div className="main__content">
-        <div className="main__banner">
+        <Link to="/" className="main__banner">
           <h2 className="main__banner-text">Find Your Community <br/> on Daccord</h2>
-        </div>
+        </Link>
         <section className="main__section">
           <div className="main__section__header">
             <h3 className="main__section-title">Featured Community</h3>
