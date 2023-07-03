@@ -2,7 +2,7 @@ import React from "react";
 import Loader from "../components/Loader/Loader";
 import "../scss/Auth.scss";
 
-const Auth = () => {
+const Reg = () => {
   return (
     <>
       <Loader />
@@ -40,4 +40,4 @@ const Auth = () => {
   );
 };
 
-export default Auth;
+export default Reg;

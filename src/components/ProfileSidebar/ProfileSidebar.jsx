@@ -5,8 +5,7 @@ import Mail from "../../icons/Mail.svg";
 import Chat from "../../icons/Chat.svg";
 import Bell from "../../icons/Bell.svg";
 import Setting from "../../icons/Setting.svg";
-import InstIcon from "../../icons/Inst.svg";
-import TwitterIcon from "../../icons/Twitter.svg";
+import TelegramIcon from "../../icons/Telegram.svg";
 import "./ProfileSidebar.scss";
 
 const ProfileSidebar = () => {
@@ -102,14 +101,8 @@ const ProfileSidebar = () => {
           <ul className="section__list">
             <li className="section__list-item">
               <Link to="/" className="section__item-link">
-                <img src={InstIcon} className="section__item-img" />
+                <img src={TelegramIcon} className="section__item-img" />
                 <h3 className="section__item-title">@aksondesign</h3>
-              </Link>
-            </li>
-            <li className="section__list-item">
-              <Link to="/" className="section__item-link">
-                <img src={TwitterIcon} className="section__item-img" />
-                <h3 className="section__item-title">@aksonvady</h3>
               </Link>
             </li>
           </ul>

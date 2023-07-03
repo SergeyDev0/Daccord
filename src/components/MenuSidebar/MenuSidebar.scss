@@ -195,6 +195,18 @@
         align-items: center;
         padding: 0;
 
+        &.active::before {
+          content: url('../../icons/active-sidebar-item.svg');
+          position: absolute;
+          top: 0;
+          bottom: 0;
+          right: 0;
+          left: 0;
+          margin: auto;
+          width: 32px;
+          height: 32px;
+        }
+
         &.mic::after {
           content: '';
           position: absolute;

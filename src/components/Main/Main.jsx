@@ -35,7 +35,7 @@ const Main = () => {
         </div>
       </div>
       <div className="main__content">
-        <Link to="/" className="main__banner">
+        <Link to="/login" className="main__banner">
           <h2 className="main__banner-text">Find Your Community <br/> on Daccord</h2>
         </Link>
         <section className="main__section">
@@ -99,7 +99,7 @@ const Main = () => {
         </section>
         <section className="main__section">
           <div className="main__section__header">
-            <h3 className="main__section-title">Featured Community</h3>
+            <h3 className="main__section-title">Popular Right Now</h3>
             <Link to="/" className="main__section-link">See all</Link>
           </div>
           <div className="main__wrapper-cards">

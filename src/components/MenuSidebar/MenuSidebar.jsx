@@ -17,7 +17,7 @@ import { Tooltip } from "react-tooltip";
 
 const MenuSidebar = () => {
   const [toggleMic, setToggleMic] = React.useState(false);
-  const [toggleHeadphones, setToggleHeadphones] = React.useState(true);
+  const [toggleHeadphones, setToggleHeadphones] = React.useState(false);
   return (
     <div className="menu-sidebar">
       <div className="menu-sidebar__top">
@@ -131,11 +131,13 @@ const MenuSidebar = () => {
             <h4 className="setting-conference__profile-name">sophiefortune</h4>
           </button>
           <button
-            className="setting-conference--button mic active"
-            data-tooltip-id="mic"
-            data-tooltip-content={
-              toggleMic ? "On mic" : "Off mic"
+            className={
+              toggleMic
+                ? "setting-conference--button mic active"
+                : "setting-conference--button mic"
             }
+            data-tooltip-id="mic"
+            data-tooltip-content={toggleMic ? "Off microphone" : "On microphone"}
             onClick={() => setToggleMic(!toggleMic)}
           >
             <Tooltip id="mic" />
@@ -146,10 +148,14 @@ const MenuSidebar = () => {
             />
           </button>
           <button
-            className="setting-conference--button"
+            className={
+              toggleHeadphones
+                ? "setting-conference--button active"
+                : "setting-conference--button"
+            }
             data-tooltip-id="headphones"
             data-tooltip-content={
-              toggleHeadphones ? "On headphones" : "Off headphones"
+              toggleHeadphones ? "Off headphones" : "On headphones"
             }
             onClick={() => setToggleHeadphones(!toggleHeadphones)}
           >

@@ -1,21 +1,25 @@
-body {
-  #root {
-    justify-content: center;
-    align-items: center;
-  }
+.wrapper-auth {
+  background-image: url('/img/auth.png');
+  background-size: 100% 100%;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
 
   .auth {
     box-sizing: border-box;
     padding: 60px 130px;
     border-radius: 20px;
-    background: url('/img/background-auth.png');
+    background: url("/img/background-auth.png");
     background-size: 100% 100%;
     width: 700px;
 
     &__title {
       text-align: center;
       font-size: 26px;
-      font-family: 'SF compact';
+      font-family: "SF compact";
       font-weight: 700;
       margin-bottom: 10px;
     }
@@ -30,16 +34,16 @@ body {
       width: 100%;
       height: 45px;
       border-radius: 10px;
-      background: #1D203E;
+      background: #1d203e;
       padding-left: 10px;
-      color: #fff;
+      color: #75FDFA;
       font-family: "Lato", sans-serif;
     }
 
     &__submit {
       height: 50px;
       border-radius: 10px;
-      background: #C640AB;
+      background: #c640ab;
       color: #fff;
       font-family: "lato", sans-serif;
       font-weight: 400;
@@ -51,13 +55,13 @@ body {
     }
 
     &__subtitle {
-      color: rgba(255, 255, 255, .7);
+      color: rgba(255, 255, 255, 0.7);
     }
 
     .col {
       display: flex;
       flex-direction: column;
-      gap: .5rem;
+      gap: 0.5rem;
     }
 
     .col:not(:last-child) {
